@@ -20,23 +20,31 @@ hr {
 /* rimuove l'elemento */
 
 
-#absolute-buttons div i {
+#absolute-buttons a i {
   font-size: 2em;
   padding: 15px;
   color: #165bf0;
   opacity: 100%;
 }
-#absolute-buttons div .fa-caret-square-up{
+#absolute-buttons a .fa-caret-square-up{
   color: red;
 }
 
-#absolute-buttons div {
+#absolute-buttons a {
   position: fixed;
   right: -15px;
-  background-color: rgba(122, 122, 122, 0.573);
+  background-color: rgba(186, 186, 186, 0.573);
   /* opacity: 60%; */
   border-radius: 10px;
   z-index: 1000;
+  transition: scale 0.5s, background-color 0.5s, box-shadow 0.5s;
+}
+
+#absolute-buttons a:hover {
+  background-color: rgba(238, 184, 102, 0.691);
+  cursor: pointer;
+  scale: 1.1;
+  box-shadow: 2px 2px 10px gray;
 }
 
 #social-page {
@@ -321,27 +329,27 @@ table {
     margin: 0 auto 2em;
   }
 
-  #absolute-buttons div {
+  #absolute-buttons a {
     right: -5px;
   }
 
-  #absolute-buttons div i {
-    font-size: 1.5em;
+  #absolute-buttons a i {
+    font-size: 1.8em;
     padding: 10px;
-    color: #165bf0;
+    /* color: #165bf0; */
     opacity: 100%;
   }
 
   #social-page {
-    bottom:530px;
+    bottom:90%;      /*attenzione versione tablet da schermo 2k*/
   }
 
   #online-calendar {
-    bottom: 450px;
-  }
+    bottom: 80.5%;      /*attenzione versione tablet da schermo 2k*/
+  }                      /*risolto mettendo % al posto dei px*/
 
   #return {
-    bottom: 10px;
+    bottom: 2%;
   }
 }
 
